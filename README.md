@@ -29,13 +29,9 @@ VMware support  is currently compatible only with Fusion 5/6 or Workstation 9. F
 Usage
 --------
 
-Once the repositories have been downloaded run "vagrant up" from within this
-directory. This will build the virtual server and provision it. You can change
-some settings such as the IP address of the server and the server's name in the
-VagrantFile.
+Once the repositories have been downloaded run `vagrant up` from within this directory. This will build the virtual server and provision it. You can change some settings such as the IP address of the server and the server's name in the VagrantFile.
 
-After the server has been built it is a good idea to update the packages. Log in
-to the server over SSH. The username and password are both "vagrant". 
+After the server has been built it is a good idea to update the packages. Log in to the server over SSH. The username and password are both "vagrant". 
 
 You should now have a working Virtual Server.
 
