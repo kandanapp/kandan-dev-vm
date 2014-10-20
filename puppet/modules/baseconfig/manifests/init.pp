@@ -5,7 +5,7 @@
 class baseconfig {
   exec { 'yum update':
     command => '/usr/bin/yum -y update',
-    #user => root, 
+    #user => root,
   }
 
   exec {'start puppet':
@@ -28,7 +28,7 @@ class base-packages {
   }
   package{"xmlto":
     ensure => present,
-  }  
+  }
 }
 
 class git (
@@ -66,7 +66,7 @@ class niceties {
 
 class rvm-ruby {
   exec{"install-rvm":
-    command => "/usr/bin/curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer | /bin/bash -s stable",
+    command => "/usr/bin/curl -sSL https://get.rvm.io | /bin/bash -s stable",
     creates => "/usr/local/rvm",
     timeout => '0'
   }
@@ -96,4 +96,3 @@ class rvm-users {
     groups => "rvm",
   }
 }
-
